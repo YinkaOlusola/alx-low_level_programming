@@ -17,7 +17,7 @@ int main(void)
 	{
 		if (digit > 9)
 		{
-			putchar(digit + 'A');
+			putchar(digit + 'X');
 		}
 		else
 		{
