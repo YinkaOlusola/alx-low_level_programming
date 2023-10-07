@@ -16,7 +16,7 @@ int main(void)
 	{
 		/*char var = char(digit);*/
 
-		putchar((char)digit);
+		putchar(digit + '0');
 	}
 
 	putchar('\n');
