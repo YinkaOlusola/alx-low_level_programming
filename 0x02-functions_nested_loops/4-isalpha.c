@@ -5,3 +5,19 @@
  * print_alphabet_x10 - Program that print alphabet
  *
  * _isalpha - A program that checks for lowercase
+ *
+ * @C: A parameter to check for lowercase
+ *
+ * Return: Always 0
+ */
+
+int _islalpha(int c)
+{
+	int a = isalpha(c);
+	if (a != 0)
+	{
+		a = 1;
+	}
+
+	return (a);
+}
