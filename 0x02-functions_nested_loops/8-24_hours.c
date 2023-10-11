@@ -28,7 +28,6 @@ void jack_bauer(void)
 						_putchar(min_1 + '0');
 						_putchar(min_2 + '0');
 						_putchar('\n');
-
 					}
 				}
 			}
@@ -51,6 +50,5 @@ void jack_bauer(void)
 				}
 			}
 		}
-
 	}
 }
