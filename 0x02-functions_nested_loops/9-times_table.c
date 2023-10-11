@@ -22,26 +22,23 @@ void times_table(void)
 			{
 				output2 = output1 / 10;
 				output3 = output1 % 10;
+				_putchar(' ');
 				_putchar(output2 + '0');
 				_putchar(output3 + '0');
-
-				if (j < 9)
-				{
-					_putchar(',');
-				}
-				_putchar(' ');
 			}
 			else
 			{
-				_putchar(output1 + '0');
-
-				if (j < 9)
+				if (j > 0 && j < 10)
 				{
-					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
 				}
+				_putchar(output1 + '0');
+			}
 
-				_putchar(' ');
-				_putchar(' ');
+			if (j < 9)
+			{
+				_putchar(',');
 			}
 		}
 
