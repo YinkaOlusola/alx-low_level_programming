@@ -2,18 +2,19 @@
 #include <ctype.h>
 
 /**
- * print_alphabet_x10 - Program that print alphabet
+ * _isalpha - A program that checks for letter
  *
- * _isalpha - A program that checks for lowercase
+ * @c: A parameter to check if it's letter
  *
- * @C: A parameter to check for lowercase
- *
- * Return: Always 0
+ * Return: 0 if it's not a letter and 1 if it's a letter
  */
 
-int _islalpha(int c)
+int _isalpha(int c)
 {
-	int a = isalpha(c);
+	int a;
+
+	a = isalpha(c);
+
 	if (a != 0)
 	{
 		a = 1;
