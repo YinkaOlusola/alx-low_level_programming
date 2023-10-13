@@ -4,16 +4,14 @@
 
 
 /**
- * main - Entry point
+ * positive_or_negative - Entry point
  *
  * This functin checks whether a number is positive, negative or zero.
  *
  * Return: 0 (Success)
  */
-int main(void)
+void positive_or_negative(int n)
 {
-	int n;
-
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
@@ -28,6 +26,4 @@ int main(void)
 	{
 		printf("%d is zero\n", n);
 	}
-
-	return (0);
 }

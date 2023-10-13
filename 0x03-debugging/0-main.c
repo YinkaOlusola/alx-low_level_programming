@@ -9,16 +9,11 @@
 
 int main(void)
 {
-	int i, result;
+	int i;
 
 	i = 0;
 
-	result = strcmp(positive_or_negative(i), "0 is zero");
-
-	if (result == 0)
-	{
-		positive_or_negative(i);
-	}
+	positive_or_negative(i);
 
 	return (0);
 }
