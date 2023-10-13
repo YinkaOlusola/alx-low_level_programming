@@ -8,12 +8,12 @@
  *
  * This functin checks whether a number is positive, negative or zero.
  *
+ * @n: The number to be tested
+ *
  * Return: 0 (Success)
  */
 void positive_or_negative(int n)
 {
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
 	if (n > 0)
 	{
 		printf("%d is positive\n", n);
