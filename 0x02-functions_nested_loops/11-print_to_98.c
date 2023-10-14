@@ -2,7 +2,6 @@
 
 /**
  * print_to_98 - Prints all natural numbers from input to 98.
- * 
  * @n: The number to begin counting at.
  */
 
