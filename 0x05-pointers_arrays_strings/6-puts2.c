@@ -9,11 +9,14 @@
 void puts2(char *str)
 {
 	int i, j, len;
+	
+	len = 0;
 
 	for (j = 0; str[j] != '\0'; j++)
 	{
 		len++;
 	}
+	
 
 	for (i = 0; i <= len; i += 2)
 	{
