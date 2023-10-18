@@ -11,7 +11,9 @@ int _atoi(char *s)
 	int i, j, k;
 	unsigned int x = 0;
 
-	i, j, k = 0;
+	i= 0;
+	j = 0;
+	k = 0;
 	x = 0;
 
 	while (s[i])
