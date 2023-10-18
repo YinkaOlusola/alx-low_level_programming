@@ -12,7 +12,7 @@ int _atoi(char *s)
 	unsigned int x = 0;
 
 	i= 0;
-	j = 0;
+	j = 1;
 	k = 0;
 	x = 0;
 
