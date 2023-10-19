@@ -38,6 +38,14 @@ int _strcmp(char *s1, char *s2)
 	{
 		return (0);
 	}
+	else if (s1[k] < s2[k])
+	{
+		return (-15);
+	}
+	else
+	{
+		return (0);
+	}
 
 	return (0);
 
