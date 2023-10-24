@@ -12,24 +12,18 @@ char *_strchr(char *s, char c)
 {
 	int i;
 
-	char result[];
-
 	i = 0;
 
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
 		{
-			result = s[i];
-			break;
-		}
-		else
-		{
-			result = '\0';
+			s += i;
+			return (s);
 		}
 
 		i++;
 	}
 
-	return (result);
+	return ('\0');
 }
