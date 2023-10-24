@@ -5,7 +5,7 @@
  * @s: The array of the memory area
  * @b: The constatnt byte to fill the memory area with
  * @n: Number of bytes of the memory area to be filled.
- * Return - The array s
+ * Return: The array s
  */
 
 char *_memset(char *s, char b, unsigned int n)
