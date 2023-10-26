@@ -23,7 +23,6 @@ char *_strchr(char *s, char c)
 	{
 		if (c == s[j])
 		{
-			s += j;
 			return (s);
 		}
 
