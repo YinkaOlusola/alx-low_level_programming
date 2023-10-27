@@ -44,7 +44,7 @@ int check_for_palindrome(char *s)
 		return (0);
 	}
 
-	return (1);
+	return (check_for_palindrome(s));
 }
 
 
