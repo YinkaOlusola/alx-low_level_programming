@@ -1,9 +1,8 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
-  * main - Prints the multiplication of two args numbers
+  * main - Prints all the args content
   * @argc: argument count
   * @argv: argument vector
   *
@@ -11,18 +10,11 @@
   */
 int main(int argc, char *argv[])
 {
-	int n1 = 0, n2 = 0;
+	int i;
 
-	if (argc == 3)
+	for (i = 0; i < argc; i++)
 	{
-		n1 = atoi(argv[1]);
-		n2 = atoi(argv[2]);
-		printf("%d\n", n1 * n2);
-	}
-	else
-	{
-		printf("Error\n");
-		return (1);
+		printf("%s\n", argv[i]);
 	}
 
 	return (0);
