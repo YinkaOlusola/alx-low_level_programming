@@ -13,35 +13,36 @@
 char *_strdup(char *str)
 {
 	unsigned int i;
-	unsigned int len;
 	unsigned int j;
 	char *strcpy;
+
+	i = 0;
+	j = 0;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 
-	i = 0;
-	len = 0;
-
-	while (str[i] != '\0')
+	while (str[i])
 	{
-		len++;
 		i++;
 	}
 
-	strcpy = malloc(sizeof(str));
+	strcpy = malloc((sizeof(char) * i) + 1);
 
 	if (strcpy == NULL)
 	{
 		return (NULL);
 	}
 
-	for (j = 0; j < len; j++)
+	while (j < i)
 	{
 		strcpy[j] = str[j];
+		j++;
 	}
+	
+	strcpy[j] = '\0';
 
 	return (strcpy);
 }
