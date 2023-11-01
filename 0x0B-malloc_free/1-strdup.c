@@ -25,13 +25,13 @@ char *_strdup(char *str)
 	i = 0;
 	len = 0;
 
-	while (str[i])
+	while (str[i] != '\0')
 	{
 		len++;
 		i++;
 	}
 
-	strcpy = malloc((len - 1) * sizeof(str));
+	strcpy = malloc(sizeof(str));
 
 	if (strcpy == NULL)
 	{
