@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 /**
  * _strdup - A function that returns a pointer to a newly
  * allocated space in memory, which contains a
@@ -22,7 +21,7 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	
+
 	i = 0;
 	len = 0;
 
@@ -32,7 +31,7 @@ char *_strdup(char *str)
 		i++;
 	}
 
-	strcpy = malloc(len * sizeof(str));
+	strcpy = malloc((len - 1) * sizeof(str));
 
 	if (strcpy == NULL)
 	{
@@ -46,5 +45,3 @@ char *_strdup(char *str)
 
 	return (strcpy);
 }
-
-
