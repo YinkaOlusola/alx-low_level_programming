@@ -16,7 +16,6 @@ void *malloc_checked(unsigned int b)
 
 	if (ptr == NULL)
 	{
-		*ptr = 98;
 		exit (0);
 	}
 
