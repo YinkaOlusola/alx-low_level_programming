@@ -31,19 +31,21 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	else
 		total_len = i + n;
 
-	ptr = malloc((total_len * sizeof(char)) + 1);
-
+	ptr = malloc((sizeof(char)) * total_len + 1);
 	if (ptr == NULL)
 		return (NULL);
 
+	j = 0;
 	while (k < total_len)
 	{
-		if (k < i)
+		if (k <= i)
 			ptr[k] = s1[k];
 
-		else if ((k >= i) && (k < total_len))
-			ptr[k] = s2[k - j];
-
+		if (k >= i)
+		{
+			ptr[k] = s2[j];
+			j++;
+		}
 		k++;
 	}
 
