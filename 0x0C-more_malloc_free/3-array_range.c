@@ -31,7 +31,7 @@ int *array_range(int min, int max)
 
 	while (i < j)
 	{
-		ptr = realloc(ptr, 1 * sizeof(int));
+		ptr = (int*)realloc(ptr, (i + 1) * sizeof(int));
 		ptr[i] = min + i;
 
 		i++;
