@@ -12,7 +12,7 @@
 
 int *array_range(int min, int max)
 {
-	int i = 0, j;
+	int i = 0;
 	int *ptr;
 
 	if (min > max)
@@ -26,19 +26,16 @@ int *array_range(int min, int max)
 	ptr[i] = min;
 
 	i++;
+	min++;
 
-	j = max + 1;
-
-	while (i < j)
+	while (min <= max)
 	{
-		ptr = (int *)realloc(ptr, (i + 1) * sizeof(int));
-		ptr[i] = min + i;
+		ptr = (int *)realloc(ptr, ((i + 1) * sizeof(int)));
+		ptr[i] = min;
 
 		i++;
+		min++;
 	}
-
-	if (ptr == NULL)
-		return (NULL);
 
 	return (ptr);
 }
