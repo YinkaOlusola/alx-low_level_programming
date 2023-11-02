@@ -37,5 +37,8 @@ int *array_range(int min, int max)
 		min++;
 	}
 
+	if (ptr == NULL)
+		return (NULL);
+
 	return (ptr);
 }
