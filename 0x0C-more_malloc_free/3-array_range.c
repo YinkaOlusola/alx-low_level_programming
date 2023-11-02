@@ -31,11 +31,14 @@ int *array_range(int min, int max)
 
 	while (i < j)
 	{
-		ptr = (int*)realloc(ptr, (i + 1) * sizeof(int));
+		ptr = (int *)realloc(ptr, (i + 1) * sizeof(int));
 		ptr[i] = min + i;
 
 		i++;
 	}
+
+	if (ptr == NULL)
+		return (NULL);
 
 	return (ptr);
 }
