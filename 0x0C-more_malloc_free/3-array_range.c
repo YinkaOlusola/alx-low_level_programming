@@ -30,7 +30,7 @@ int *array_range(int min, int max)
 
 	while (min <= max)
 	{
-		ptr = (int *)realloc(ptr, ((i + 1) * sizeof(int)));
+		ptr = (int *)realloc(ptr, ((i + 2) * sizeof(int)));
 		ptr[i] = min;
 
 		i++;
