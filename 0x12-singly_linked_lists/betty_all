@@ -1,0 +1,8 @@
+#!/bin/bash
+
+betty lists.h
+betty 0-print_list.c
+betty 1-list_len.c
+betty 2-add_node.c
+betty 3-add_node_end.c
+betty 4-free_list.c
