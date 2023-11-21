@@ -1,6 +1,6 @@
 #include "lists.h"
 #include <stdio.h>
-#include <stdlid.h>
+#include <stdlib.h>
 
 
 /**
@@ -17,11 +17,15 @@ size_t print_listint(const listint_t *h)
 
 	while (h != NULL)
 	{
-		if (h->n != NULL)
+		if (&(h->n) != NULL)
 		{
-			print(h->n);
-			count++;
+			printf("%d\n", h->n);
 		}
+
+		count++;
+		
+		h = h->next;
+
 	}
 	return (count);
 }
