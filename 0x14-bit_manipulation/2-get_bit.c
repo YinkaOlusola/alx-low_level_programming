@@ -21,7 +21,7 @@ int get_bit(unsigned long int n, unsigned int index)
 			if (n % 2)
 				return (1);
 			else
-				return (1);
+				return (0);
 		}
 
 		n = n / 2;
@@ -33,4 +33,4 @@ int get_bit(unsigned long int n, unsigned int index)
 		return (0);
 
 	return (-1);
-}
+i}
