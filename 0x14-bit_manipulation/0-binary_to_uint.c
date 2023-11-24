@@ -25,7 +25,7 @@ unsigned int binary_to_uint(const char *b)
 
 	while (str_len--)
 	{
-		if (b[str_len] != 48 && b[str_len] != 49)
+		if (b[str_len] != '0' && b[str_len] != '1')
 			return (0);
 
 		if (b[str_len] == 49)
