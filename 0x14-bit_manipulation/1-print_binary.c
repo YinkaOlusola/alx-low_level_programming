@@ -24,7 +24,7 @@ void print_binary(unsigned long int n)
 /**
  * binary_division - Makes a binary division.
  * @n: Number to be divided.
- * 
+ *
  * Return: None.
  */
 
