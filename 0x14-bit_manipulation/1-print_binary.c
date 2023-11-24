@@ -1,6 +1,6 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * print_binary - Prints the binary representation of a number
@@ -19,6 +19,14 @@ void print_binary(unsigned long int n)
 
 	binary_division(n);
 }
+
+
+/**
+ * binary_division - Makes a binary division.
+ * @n: Number to be divided.
+ * 
+ * Return: None.
+ */
 
 void binary_division(unsigned long int n)
 {
