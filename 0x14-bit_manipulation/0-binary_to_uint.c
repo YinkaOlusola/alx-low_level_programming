@@ -2,7 +2,7 @@
 
 
 /**
- * binary_to_unit - Converts a binary to an unisgned int
+ * binary_to_uint - Converts a binary to an unisgned int
  * @b: The binary number to be converted
  *
  * Return: The converted number or 0.
