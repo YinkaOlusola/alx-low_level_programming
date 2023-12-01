@@ -44,15 +44,21 @@ void copy_file_from_to(const char *from, const char *to)
 	{
 		if (write(dest_file, buffer, read_input) != read_input || dest_file == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", from);
+			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", to);
 			exit(99);
 		}
 	}
 
 	if (read_input == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from %d\n", dest_file);
-		exit(99);
+		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", from);
+		exit(98);
+	}
+
+	if (close(src_file) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close %s %d\n", from, src_file);
+		exit(100);
 	}
 }
 
