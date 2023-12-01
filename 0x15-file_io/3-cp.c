@@ -50,7 +50,7 @@ void copy_file_from_to(const char *from, const char *to)
 	{
 		if (write(dest_file, buffer, read_input) != read_input || dest_file == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to  %s\n", to);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to);
 			exit(99);
 		}
 	}
