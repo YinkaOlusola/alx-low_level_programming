@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
-	}
+	}i
 
 	copy_file_from_to(argv[1], argv[2]);
 	exit(0);
@@ -38,19 +38,19 @@ void copy_file_from_to(const char *from, const char *to)
 
 	src_file = open(from, O_RDONLY);
 
-	dest_file = open(to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-
 	if (!from || src_file == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", from);
 		exit(98);
 	}
 
+	dest_file = open(to, O_CREAT | O_WRONLY | O_TRUNC, 0644);
+
 	while ((read_input = read(src_file, buffer, 1024)) > 0)
 	{
 		if (write(dest_file, buffer, read_input) != read_input || dest_file == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", to);
+			dprintf(STDERR_FILENO, "Error: Can't write to  %s\n", to);
 			exit(99);
 		}
 	}
