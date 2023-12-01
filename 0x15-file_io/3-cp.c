@@ -31,7 +31,7 @@ int main(int argc, char **argv)
  * Return: None.
  */
 
-int copy_file_from_to(const char *from, const char *to)
+void copy_file_from_to(const char *from, const char *to)
 {
 	int src_file, dest_file, read_input;
 	char buffer[1024];
@@ -49,5 +49,12 @@ int copy_file_from_to(const char *from, const char *to)
 		}
 	}
 
-	return (0);
+	if (read_input == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from %d\n", dest_file);
+		exit(99);
+	}
 }
+
+
+
