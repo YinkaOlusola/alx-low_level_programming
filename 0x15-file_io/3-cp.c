@@ -40,6 +40,12 @@ void copy_file_from_to(const char *from, const char *to)
 
 	dest_file = open(to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
+	if (!from || src_file == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", from);
+		exit(98);
+	}
+
 	while ((read_input = read(src_file, buffer, 1024)) > 0)
 	{
 		if (write(dest_file, buffer, read_input) != read_input || dest_file == -1)
