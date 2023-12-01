@@ -44,7 +44,7 @@ void copy_file_from_to(const char *from, const char *to)
 		exit(98);
 	}
 
-	dest_file = open(to, O_CREAT | O_WRONLY | O_TRUNC, 0644);
+	dest_file = open(to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	while ((read_input = read(src_file, buffer, 1024)) > 0)
 	{
