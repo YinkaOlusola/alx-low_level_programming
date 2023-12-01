@@ -57,7 +57,13 @@ void copy_file_from_to(const char *from, const char *to)
 
 	if (close(src_file) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close %s %d\n", from, src_file);
+		dprintf(STDERR_FILENO, "Error: Can't close %d\n", src_file);
+		exit(100);
+	}
+
+	if (close(dest_file) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close %d\n", dest_file);
 		exit(100);
 	}
 }
